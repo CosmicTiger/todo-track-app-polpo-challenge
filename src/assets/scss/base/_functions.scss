@@ -1,0 +1,4 @@
+@function font-conversion-pxtorem($px) {
+	$result: ($px / $standard-size) * 1rem;
+	@return $result;
+}
