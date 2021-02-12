@@ -1,16 +1,10 @@
 {
-    "tasks": [
-        {
-            "id": 1,
-            "text": "Doctors Appointment",
-            "day": "Feb 12th at 2:30 p.m.",
-            "reminder": true
-        },
-        {
-            "id": 2,
-            "text": "Date with my Girlfriend",
-            "day": "Feb 12th at 4:30 p.m.",
-            "reminder": true
-        }
-    ]
+  "tasks": [
+    {
+      "text": "fasd",
+      "day": "afsd",
+      "reminder": true,
+      "id": 1
+    }
+  ]
 }

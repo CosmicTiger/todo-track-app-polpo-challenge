@@ -14,12 +14,12 @@ const Task = (props) => {
 
     return (
         <div
-            className={`card Task ${task.reminder ? 'reminder' : ''}`}
+            className={`card task ${task.reminder ? 'reminder' : ''}`}
             onDoubleClick={toggler}
         >
             <div className="card-header">
                 <h5 className="card-title Task-title">
-                    {task.title} {' '}
+                    {task.text} {' '}
                 </h5>
                 <FaTimes
                     style={{ color: 'red', cursor: 'pointer' }}
@@ -28,10 +28,7 @@ const Task = (props) => {
             </div>
             <div className="card-body Task-body">
                 <span className="card-text Task-content">
-                    {task.weekDay}
-                </span>
-                <span className="card-text Task-content">
-                    {task.inbox}
+                    {task.day}
                 </span>
             </div>
         </div>

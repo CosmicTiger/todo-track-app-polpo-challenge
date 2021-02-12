@@ -14,6 +14,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### `yarn server`
+
+Runs the mockup api in the development mode.\
+Open [http://localhost:5000](http://localhost:5000) to view it in the browser. Specially the resource route [http://localhost:5000/tasks](http://localhost:5000/tasks)
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
