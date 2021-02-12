@@ -1,0 +1,166 @@
+//  Placeholder classes
+
+%row {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+}
+
+%column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+%centered_flex {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+%standard-position {
+	bottom: 0;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+// Mixins
+@mixin flex-container($direction: row, $main-axis: center, $sec-axis: center) {
+	align-items: $sec-axis;
+	display: flex;
+	justify-content: $main-axis;
+	flex-direction: $direction;
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-wrap: wrap;
+
+	@content;
+}
+
+@mixin flex-container-row(
+	$direction: row,
+	$wrap: wrap,
+	$main-axis: center,
+	$sec-axis: center
+) {
+	align-items: $sec-axis;
+	display: flex;
+	justify-content: $main-axis;
+	flex-flow: $direction $wrap;
+	flex-grow: 1;
+	flex-shrink: 0;
+
+	@content;
+}
+
+// Shapes mixins
+@mixin animation-property-compatibility($animation) {
+	-moz-animation: $animation;
+	-ms-animation: $animation;
+	-o-animation: $animation;
+	-webkit-animation: $animation;
+	animation: $animation;
+}
+
+@mixin filter-property-compatibility($filter) {
+	-moz-filter: $filter;
+	-ms-filter: $filter;
+	-o-filter: $filter;
+	-webkit-filter: $filter;
+	filter: $filter;
+}
+
+@mixin transform-property-compatibility($transform) {
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	-webkit-transform: $transform;
+	transform: $transform;
+}
+
+@mixin transition-property-compatibility($transition: all 0.2s ease) {
+	-moz-transition: $transition;
+	-ms-transition: $transition;
+	-o-transition: $transition;
+	-webkit-transition: $transition;
+	transition: $transition;
+}
+
+@mixin pointer-events {
+	&:hover,
+	&:active,
+	&:focus,
+	&:visited {
+		@content;
+	}
+}
+
+@mixin arrow-icon-multidirection(
+	$border-top: 0px,
+	$border-right: 0px,
+	$border-bottom: 0px,
+	$border-left: 0px,
+	$top: 0px,
+	$right: 0px,
+	$bottom: 0px,
+	$left: 0px,
+	$transform: rotate(45deg),
+	$height: 12px,
+	$width: 12px
+) {
+	border-bottom: $border-bottom;
+	border-left: $border-left;
+	border-right: $border-right;
+	border-top: $border-top;
+	bottom: $bottom;
+	content: "";
+	display: inline-block;
+	height: $height;
+	left: $left;
+	right: $right;
+	position: absolute;
+	@include transform-property-compatibility($transform);
+	top: $top;
+	width: $width;
+}
+
+@mixin circle-button(
+	$radius,
+	$background-color,
+	$color,
+	$isImportant: "",
+	$box-shadow: "",
+	$height: 40px,
+	$width: 40px
+) {
+	border: none;
+	background-color: $background-color;
+	border-radius: $radius #{$isImportant};
+	color: $color;
+	cursor: pointer;
+	height: $height;
+	width: $width;
+}
+
+@mixin square-button(
+	$radius,
+	$background-color,
+	$color,
+	$isImportant,
+	$box-shadow
+) {
+	background-color: $background-color;
+	border-radius: $radius #{$isImportant};
+	box-shadow: #{$box-shadow};
+	color: $color;
+	cursor: pointer;
+	height: 40px;
+	width: 40px;
+}
+
+@mixin square($size) {
+	width: vw($size);
+	height: vw($size);
+}

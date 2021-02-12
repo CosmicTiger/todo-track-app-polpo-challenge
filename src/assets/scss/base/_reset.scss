@@ -1,0 +1,21 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $poppins;
+	font-size: $standard-size;
+}
+
+a {
+	cursor: pointer;
+	display: block;
+	color: $black;
+	text-decoration: none;
+	@include pointer-events {
+		color: $react-aqua;
+		text-decoration: none;
+	}
+}

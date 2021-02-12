@@ -1,0 +1,17 @@
+.Spinner {
+	bottom: 0;
+	height: 100%;
+	position: fixed;
+	top: 37%;
+	right: 0;
+	left: 0;
+	width: 100%;
+
+	&-loader {
+		padding-bottom: 40px;
+	}
+	&-text {
+		color: $polpo-darkblue;
+		font-size: 1.4rem;
+	}
+}

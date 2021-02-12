@@ -1,0 +1,12 @@
+// For third party libraries for CSS
+@import "vendor/vendor";
+
+// Base styling of the project
+@import "base/base";
+
+// Components Styling
+@import "components/layout/spinner";
+@import "components/track-list/track-list";
+
+// Views Styling
+@import "views/index/index";
