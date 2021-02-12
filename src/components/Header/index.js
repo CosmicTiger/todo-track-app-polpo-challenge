@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
-import Button from 'reactstrap';
+import { Button } from 'reactstrap';
 
 const Header = (props) => {
     const { title, onAdd, showAdd } = props;
     const location = useLocation();
 
     return (
-        <header className="Header">
-            <h1 className="Header-taskTitle">{title}</h1>
+        <header className="header">
+            <h1 className="header-taskTitle">{title}</h1>
             { location.pathname === '/' && (
                 <Button
                     color={showAdd ? 'danger' : 'success'}

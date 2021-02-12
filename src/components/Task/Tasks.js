@@ -1,4 +1,4 @@
-import Task from './Task';
+import Task from './index';
 
 const Tasks = (props) => {
     const { tasks, onDelete, onToggle } = props;
