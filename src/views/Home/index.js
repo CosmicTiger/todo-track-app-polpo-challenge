@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import AddTask from '../../components/AddTask';
+import Tasks from '../../components/Tasks';
 
-const Home = () => {
+const Home = (props) => {
+    const { showAddTask, tasks } = props;
+
     return (
         <>
-            <p>Hello world!</p>
+            <Task />
         </>
     )
 }
